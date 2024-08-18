@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctico 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header>
+       <nav>
+        <h1 class="text-theme" id="text-theme">Formulario Personal</h1>
+        <label for="toggle" id="lbl-toggle" tabindex="1">
+            <span>Modo oscuro</span>
+            <i class="fa-solid fa-moon"></i>
+        </label>
+        <input type="checkbox" id="toggle" tabindex="1">
+       </nav>
+    </header>
+    <main id="container">
+        <form action="#" id="formId">
+            <!-- Name -->
+            <div class="container-input" id="group-name">
+                <label for="name">Nombre</label>
+                <div class="group-input">   
+                    <input type="text" name="name" id="name" placeholder="María Alejandra">
+                    <i class="validation-status fa" aria-hidden="true"></i>
+                </div>
+                <p class="input-error">El nombre debe tener entre 3 y 20 digitos y solo debe contener letras.</p>
+            </div>
+
+            <!-- Lastname -->
+             <div class="container-input" id="group-lastname">
+                <label for="lastname">Apellido</label>
+                <div class="group-input">
+                    <input type="text" name="lastname" id="lastname" placeholder="Lopez">
+                    <i class="validation-status fa" aria-hidden="true"></i>
+                </div>
+                <p class="input-error">El apellido debe tener entre 3 y 20 digitos y solo debe contener letras.</p>
+             </div>
+
+            <!-- Email -->
+            <div class="container-input" id="group-email">
+                <label for="email">Correo Electrónico</label>
+                <div class="group-input">
+                    <input type="email" name="email" id="email" placeholder="maria@email.com">
+                    <i class="validation-status fa" aria-hidden="true"></i>
+                </div>
+                <p class="input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+            </div>
+
+            <!-- Birthday -->
+             <div class="container-input" id="group-birthdate">
+                <label for="birthdate">Fecha de Nacimiento</label>
+                <div class="group-input">
+                    <input type="date" name="birthdate" id="birthdate">
+                    <i class="validation-status fa" aria-hidden="true"></i>
+                </div>
+                <p class="input-error">Debe seleccionar una fecha.</p>
+                <p class="input-error-future">La fecha de nacimiento no puede ser en el futuro.</p>
+                <p class="input-error-age">Debe ser mayor de edad.</p>
+             </div>
+
+            <!-- Country -->
+            <div class="container-input" id="group-country">
+                <label for="country">País de Residencia</label>
+                <select id="country" name="country">
+                    <option value="">--Selecciona un país--</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="mexico">México</option>
+                    <option value="españa">España</option>
+                    <option value="colombia">Colombia</option>
+                    <option value="chile">Chile</option>
+                </select>
+                <p class="input-error">Debe seleccionar un país.</p>
+            </div>
+
+            <!--Error message  -->
+            <div class="error-msg" id="error-msg">
+                <p>
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    <b>Error:</b>
+                    <span>Por favor complete todos los campos.</span>
+                </p>
+            </div>
+            <!-- Submit -->
+             <button data-message="Botón para enviar la información" id="btnSubmit" type="submit">Enviar información</button>
+
+            <!-- Message -->
+             <div class="success-msg" id="success-msg">
+                <p>Formulario enviado</p>
+             </div>
+        </form>
+    </main>
+    <footer>
+        <p class="text-theme" id="text-theme">© Carrizo Walter Daniel</p>
+    </footer>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/dark-mode.js"></script>
+</body>
+</html>
